@@ -101,7 +101,7 @@ class ExampleModelLessView(viewsets.ViewSet):
         else:
             return Response({'error': 'invalid data'})
 
-    def create(self,request):
+    def create(self, request):
         data = request.data.dict()
         print(data)
         return Response(status=HTTP_201_CREATED)
