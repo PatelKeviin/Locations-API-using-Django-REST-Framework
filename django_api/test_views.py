@@ -47,22 +47,22 @@ def test_login(auth_paras):
     assert False
 
 
-def test_items(auth_paras):
-    url = BASE_URL + 'items/'
-    headers = {
-        'Authorization': 'Token ' + auth_paras.token
-    }
-    kwargs = {
-        "headers": headers
-    }
-    response = requests.get(url=url, **kwargs)
-    _dict = json.loads(response.text)
-    if 'count' in _dict.keys():
-        if _dict['count'] > 0:
-            assert True
-            return
-
-    assert False
+# def test_items(auth_paras):
+#     url = BASE_URL + 'items/'
+#     headers = {
+#         'Authorization': 'Token ' + auth_paras.token
+#     }
+#     kwargs = {
+#         "headers": headers
+#     }
+#     response = requests.get(url=url, **kwargs)
+#     _dict = json.loads(response.text)
+#     if 'count' in _dict.keys():
+#         if _dict['count'] > 0:
+#             assert True
+#             return
+#
+#     assert False
 
 
 sleep_times = [0, 2, 15]
