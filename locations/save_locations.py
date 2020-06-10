@@ -67,7 +67,7 @@ if __name__ == '__main__':
     locations = get_locations(path_to_csv)
 
     # api key credentials
-    GOOGLE_API_KEY = 'AIzaSyCqQSQnMLR8Godbw801iDQNuR7mMs8h5nw'
+    GOOGLE_API_KEY = 'Your key'
     connection_params_ = {
         'output_format': 'json',
         'api_key': GOOGLE_API_KEY

@@ -41,7 +41,7 @@ def test_get_all_locations(auth_paras):
     response = requests.get(url=url, **kwargs)
     if response.status_code == 200:
         data = response.json()
-        if len(data) == 52:
+        if len(data) > 0:
             assert True
             return
 
@@ -102,7 +102,7 @@ def test_get_multiple_locations(auth_paras):
     """
     url = BASE_URL + 'locations/'
     params = {
-        'location': ['NewYork', 'abc', 'params'],
+        'location': ['NewYork', 'abc', 'Boise'],
     }
     headers = {
         'Authorization': 'Token ' + auth_paras.token
